@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+  
+</head>
+<body class="bg-body flex">
+  <div class="container flex ff-space fw-500 fs-150 text-color">
+    <div class="image bg-image">
+      <img src="images/bg-card-back.png" alt="">
+      <p class="text-white">000</p>
+    </div>
+    <div class="card bg-card-front flex text-white uppercase">
+      <img src="images/card-logo.svg" alt="">
+      <h4>0000 0000 0000 0000</h4>
+      <div class="details flex">
+        <p>Jane Appleseed</p>
+        <p>00/00</p>
+      </div>
+    </div>
+    <form id="form">
+      <div class="form-control">
+        <label class="uppercase" for="cardholder name">cardholder name</label>
+        <input type="text" name="cardholder name" id="cardName" placeholder="e.g. Jane Appleseed">
+        <span></span>
+      </div>
+      <div class="form-control">
+        <label class="uppercase" for="card number">card number</label>
+        <input type="number" name="card number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        <span>Wrong format, numbers only</span>
+      </div>
+      <div class="form-control flex">
+        <div class="date-details">
+          <label class="uppercase" for="exp. date (mm/yy)">exp. date (mm/yy)</label>
+          <div class="flex">
+            <input type="number" name="exp. date (mm/yy)" id="month" placeholder="MM">
+            <input type="number" name="exp. date (mm/yy)" id="year" placeholder="YY">
+          </div>
+          <span>Can't be blank</span>
+        </div>
+        <div class="cvc">
+          <label class="uppercase" for="cvc">cvc</label>
+          <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+          <span>Can't be blank</span>
+        </div>
+      </div>
+      <button class="confirmBtn bg-button text-white">Confirm</button>
+    </form>
+  </div>
+  <div class="wrapper flex ff-space fw-500 fs-150 text-color hidden">
+    <div class="image bg-image">
+      <img src="images/bg-card-back.png" alt="">
+      <p class="text-white">123</p>
+    </div>
+    <div class="card bg-card-front flex text-white uppercase">
+      <img src="images/card-logo.svg" alt="">
+      <h4>9591 6489 6389 1011</h4>
+      <div class="details flex">
+        <p>Felicia Leire</p>
+        <p>09/26</p>
+      </div>
+    </div>
+    <div class="preview flex">
+      <img src="images/icon-complete.svg" alt="">
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button class="continueBtn bg-button text-white">Continue</button>
+    </div>
+  </div>
+</body>
+</html>
